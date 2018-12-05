@@ -1,12 +1,12 @@
 #! /bin/bash
 # zip.sh
-echo "Enter a password: "
-read PASSWORD
-while echo $PASSWORD | egrep -v "^[a-z0-9._]$" > /dev/null 2>&1
+echo "Enter a username: "
+read USERNAME
+while echo $USERNAME | egrep -v "^[a-z][a-z0-9._]{3,12}$" > /dev/null 2>&1
 do
-	echo "You must enter a valid password make sure it has lowercase, numbers, or underscore !"
-	echo "Enter a password: "
-	read PASSWORD
+	echo "You must enter a valid username! Must contain 3-12 characters, begin with a letter, and only lowercase letters!"
+	echo "Enter a username: "
+	read USERNAME
 done
 echo "Thank you"
 
